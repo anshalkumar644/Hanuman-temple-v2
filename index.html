@@ -1,0 +1,447 @@
+<!DOCTYPE html>
+<html lang="hi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Shri Bajarang Bali Mandir, Bakharaur</title>
+    
+    <!-- Tailwind CSS (CDN se) -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    
+    <!-- Custom Tailwind Configuration -->
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        saffron: {
+                            100: '#fff3e0',
+                            200: '#ffe0b2',
+                            300: '#ffcc80',
+                            400: '#ffb74d',
+                            500: '#ff9800',
+                            600: '#f57c00',
+                            700: '#e65100',
+                            800: '#bf360c',
+                            900: '#dd2c00',
+                        }
+                    },
+                    fontFamily: {
+                        sans: ['Poppins', 'sans-serif'],
+                        devanagari: ['Mukta', 'sans-serif'],
+                    }
+                }
+            }
+        }
+    </script>
+
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Mukta:wght@400;600;700&family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    
+    <!-- FontAwesome Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+    <!-- External CSS File Link -->
+    <link rel="stylesheet" href="style.css">
+</head>
+<body class="bg-gray-50 text-gray-800">
+
+    <!-- Navigation Bar -->
+    <nav class="bg-saffron-700 text-white fixed w-full z-50 top-0 shadow-lg">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between items-center h-16">
+                <!-- Logo aur Mandir ka Naam -->
+                <div class="flex-shrink-0 flex items-center gap-2 cursor-pointer" onclick="window.scrollTo(0,0)">
+                    <i class="fa-solid fa-om text-2xl text-yellow-300"></i>
+                    <span class="font-bold text-xl md:text-2xl font-devanagari tracking-wide">Mandir Bakharaur</span>
+                </div>
+                
+                <!-- Desktop Menu -->
+                <div class="hidden md:flex space-x-6">
+                    <a href="#home" class="hover:text-yellow-300 transition-colors font-medium">Mukhya Prishth</a>
+                    <a href="#events" class="hover:text-yellow-300 transition-colors font-medium">Karyakram</a>
+                    <a href="#darshan" class="hover:text-yellow-300 transition-colors font-medium">Darshan Samay</a>
+                    <a href="#donation" class="hover:text-yellow-300 transition-colors font-bold text-yellow-100">Sahyog</a>
+                    <a href="#committee" class="hover:text-yellow-300 transition-colors font-medium">Samiti</a>
+                    <a href="#contact" class="hover:text-yellow-300 transition-colors font-medium">Sampark</a>
+                </div>
+
+                <!-- Mobile Menu Button -->
+                <div class="md:hidden flex items-center">
+                    <button id="mobile-menu-btn" class="text-white hover:text-yellow-300 focus:outline-none">
+                        <i class="fa-solid fa-bars text-2xl"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+
+        <!-- Mobile Menu -->
+        <div id="mobile-menu" class="hidden md:hidden bg-saffron-800 pb-4 px-4 space-y-2">
+            <a href="#home" class="block py-2 hover:text-yellow-300 mobile-link">Mukhya Prishth</a>
+            <a href="#events" class="block py-2 hover:text-yellow-300 mobile-link">Karyakram</a>
+            <a href="#darshan" class="block py-2 hover:text-yellow-300 mobile-link">Darshan Samay</a>
+            <a href="#donation" class="block py-2 hover:text-yellow-300 mobile-link font-bold text-yellow-100">Sahyog (Donation)</a>
+            <a href="#committee" class="block py-2 hover:text-yellow-300 mobile-link">Samiti</a>
+            <a href="#contact" class="block py-2 hover:text-yellow-300 mobile-link">Sampark</a>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section id="home" class="pt-16 min-h-screen flex items-center justify-center bg-hero-pattern text-white text-center px-4">
+        <div class="max-w-4xl mx-auto py-20 animate-fade-in-up">
+            <h2 class="text-yellow-300 font-bold text-xl md:text-3xl mb-2 chant-text">॥ Jai Shri Ram ॥ ॥ Jai Bajarang Bali ॥</h2>
+            <h1 class="text-4xl md:text-6xl font-bold font-devanagari mb-6 leading-tight shadow-sm text-white">
+                Shri Bajarang Bali Mandir
+            </h1>
+            <p class="text-lg md:text-2xl mb-8 text-gray-100 font-medium">
+                Gram - Bakharaur, Aapka Hardik Swagat Karta Hai
+            </p>
+            <div class="flex flex-col sm:flex-row gap-4 justify-center">
+                <a href="#events" class="bg-yellow-500 text-saffron-900 px-8 py-3 rounded-full font-bold text-lg hover:bg-yellow-400 transition-all shadow-lg transform hover:scale-105">
+                    Maha Kalash Yatra
+                </a>
+                <a href="#donation" class="bg-transparent border-2 border-white text-white px-8 py-3 rounded-full font-bold text-lg hover:bg-white hover:text-saffron-900 transition-all shadow-lg transform hover:scale-105">
+                    Sahyog Karein
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Highlighted Event Section (Kalash Yatra) -->
+    <section id="events" class="py-16 bg-saffron-50">
+        <div class="max-w-6xl mx-auto px-4">
+            <div class="text-center mb-10">
+                <h2 class="text-3xl md:text-4xl font-bold text-saffron-800 mb-4 font-devanagari">Aagami Karyakram</h2>
+                <div class="w-24 h-1 bg-saffron-500 mx-auto rounded"></div>
+            </div>
+
+            <!-- Kalash Yatra Banner -->
+            <div class="bg-white rounded-2xl shadow-xl overflow-hidden border border-saffron-100 flex flex-col md:flex-row">
+                <div class="bg-saffron-600 text-white p-8 md:w-1/3 flex flex-col justify-center items-center text-center">
+                    <i class="fa-solid fa-bell text-5xl mb-4 text-yellow-300"></i>
+                    <h3 class="text-2xl font-bold mb-2">Maha Kalash Yatra</h3>
+                    <p class="text-saffron-100 mb-4">Nav-Nirmit Mandir Pran Pratishtha Mahotsav</p>
+                    <div class="bg-saffron-800 px-6 py-2 rounded-lg text-xl font-bold border border-saffron-400">
+                        14 April 2026
+                    </div>
+                </div>
+                <div class="p-8 md:w-2/3 flex flex-col justify-center">
+                    <h4 class="text-2xl font-bold text-gray-800 mb-4">Aap Sabhi Gramwasi Sadar Aamantrit Hain</h4>
+                    <p class="text-gray-600 mb-6 leading-relaxed">
+                        Pichle dino 4 April ko sampann hue Tulsi Pujan aur Dhwaja Yatra ki safalta ke baad, ab 14 April 2026 ko paramparik 'Maha Kalash Yatra' ka aayojan kiya ja raha hai. Kripya samay par upasthit hokar is punya karya me bhagidaar banein.
+                    </p>
+                    
+                    <!-- Countdown Timer -->
+                    <div class="grid grid-cols-4 gap-2 md:gap-4 text-center mt-4">
+                        <div class="bg-saffron-100 p-3 rounded-lg border border-saffron-200">
+                            <span id="days" class="block text-2xl md:text-3xl font-bold text-saffron-700">00</span>
+                            <span class="text-xs md:text-sm text-saffron-900 font-medium">Din (Days)</span>
+                        </div>
+                        <div class="bg-saffron-100 p-3 rounded-lg border border-saffron-200">
+                            <span id="hours" class="block text-2xl md:text-3xl font-bold text-saffron-700">00</span>
+                            <span class="text-xs md:text-sm text-saffron-900 font-medium">Ghante (Hours)</span>
+                        </div>
+                        <div class="bg-saffron-100 p-3 rounded-lg border border-saffron-200">
+                            <span id="minutes" class="block text-2xl md:text-3xl font-bold text-saffron-700">00</span>
+                            <span class="text-xs md:text-sm text-saffron-900 font-medium">Minute</span>
+                        </div>
+                        <div class="bg-saffron-100 p-3 rounded-lg border border-saffron-200">
+                            <span id="seconds" class="block text-2xl md:text-3xl font-bold text-saffron-700">00</span>
+                            <span class="text-xs md:text-sm text-saffron-900 font-medium">Second</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Schedule Section -->
+            <div class="mt-12 bg-white rounded-2xl shadow-lg p-8 border-t-4 border-saffron-500">
+                <h3 class="text-2xl md:text-3xl font-bold text-gray-800 mb-8 text-center font-devanagari">Karyakram Suchi (14 se 17 April)</h3>
+                <div class="space-y-6">
+                    <div class="flex flex-col md:flex-row items-center md:items-start gap-4 border-b border-gray-100 pb-4">
+                        <div class="bg-saffron-100 px-4 py-2 rounded-lg text-saffron-800 font-bold w-full md:w-56 text-center shrink-0 shadow-sm">14 April 2026</div>
+                        <div class="text-center md:text-left">
+                            <h4 class="text-xl font-bold text-gray-800">Maha Kalash Yatra</h4>
+                            <p class="text-gray-600">Nav-Nirmit Mandir Pran Pratishtha hetu paramparik yatra.</p>
+                        </div>
+                    </div>
+                    <div class="flex flex-col md:flex-row items-center md:items-start gap-4 border-b border-gray-100 pb-4">
+                        <div class="bg-saffron-100 px-4 py-2 rounded-lg text-saffron-800 font-bold w-full md:w-56 text-center shrink-0 shadow-sm">15 April 2026</div>
+                        <div class="text-center md:text-left">
+                            <h4 class="text-xl font-bold text-gray-800">Pran Pratishtha aur Nagar Bhraman</h4>
+                            <p class="text-gray-600">Shri Bajarang Bali ki murti sthapana aur gaon mein nagar bhraman.</p>
+                        </div>
+                    </div>
+                    <div class="flex flex-col md:flex-row items-center md:items-start gap-4 border-b border-gray-100 pb-4">
+                        <div class="bg-saffron-100 px-4 py-2 rounded-lg text-saffron-800 font-bold w-full md:w-56 text-center shrink-0 shadow-sm">16 aur 17 April 2026</div>
+                        <div class="text-center md:text-left">
+                            <h4 class="text-xl font-bold text-gray-800">Astjam</h4>
+                            <p class="text-gray-600">Pavitra Akhand Astjam ka aayojan.</p>
+                        </div>
+                    </div>
+                    <div class="flex flex-col md:flex-row items-center md:items-start gap-4">
+                        <div class="bg-gray-800 px-4 py-2 rounded-lg text-yellow-300 font-bold w-full md:w-56 text-center shrink-0 shadow-sm">17 April 2026 (Ratri)</div>
+                        <div class="text-center md:text-left">
+                            <h4 class="text-xl font-bold text-gray-800">Ram Viwah Natak</h4>
+                            <p class="text-gray-600">Ratri kalin vishesh aakarshan: Ram Viwah par aadharit natak prastuti.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Darshan Timings -->
+    <section id="darshan" class="py-16 bg-white">
+        <div class="max-w-5xl mx-auto px-4">
+            <div class="text-center mb-12">
+                <h2 class="text-3xl md:text-4xl font-bold text-saffron-800 mb-4 font-devanagari">Darshan aur Aarti ka Samay</h2>
+                <div class="w-24 h-1 bg-saffron-500 mx-auto rounded"></div>
+                <p class="mt-4 text-gray-600">Pratidin Bajarang Bali ke darshan kar kripa prapt karein.</p>
+            </div>
+
+            <div class="grid md:grid-cols-2 gap-8">
+                <!-- Morning -->
+                <div class="bg-orange-50 rounded-xl p-8 shadow-md border-t-4 border-orange-400 hover:shadow-lg transition-shadow">
+                    <div class="flex items-center gap-4 mb-6">
+                        <div class="bg-orange-100 p-4 rounded-full text-orange-500">
+                            <i class="fa-solid fa-sun text-3xl"></i>
+                        </div>
+                        <h3 class="text-2xl font-bold text-gray-800">Pratah Kaal (Morning)</h3>
+                    </div>
+                    <ul class="space-y-4">
+                        <li class="flex justify-between items-center border-b border-orange-200 pb-2">
+                            <span class="text-gray-700 font-medium">Mandir Khulne ka Samay</span>
+                            <span class="bg-white px-3 py-1 rounded text-orange-700 font-bold shadow-sm">05:00 AM</span>
+                        </li>
+                        <li class="flex justify-between items-center border-b border-orange-200 pb-2">
+                            <span class="text-gray-700 font-medium">Mangala Aarti</span>
+                            <span class="bg-white px-3 py-1 rounded text-orange-700 font-bold shadow-sm">06:00 AM</span>
+                        </li>
+                        <li class="flex justify-between items-center pb-2">
+                            <span class="text-gray-700 font-medium">Mandir Band hone ka Samay</span>
+                            <span class="bg-white px-3 py-1 rounded text-orange-700 font-bold shadow-sm">12:00 PM</span>
+                        </li>
+                    </ul>
+                </div>
+
+                <!-- Evening -->
+                <div class="bg-saffron-50 rounded-xl p-8 shadow-md border-t-4 border-saffron-600 hover:shadow-lg transition-shadow">
+                    <div class="flex items-center gap-4 mb-6">
+                        <div class="bg-saffron-100 p-4 rounded-full text-saffron-600">
+                            <i class="fa-solid fa-moon text-3xl"></i>
+                        </div>
+                        <h3 class="text-2xl font-bold text-gray-800">Sandhya Kaal (Evening)</h3>
+                    </div>
+                    <ul class="space-y-4">
+                        <li class="flex justify-between items-center border-b border-saffron-200 pb-2">
+                            <span class="text-gray-700 font-medium">Mandir Khulne ka Samay</span>
+                            <span class="bg-white px-3 py-1 rounded text-saffron-800 font-bold shadow-sm">04:00 PM</span>
+                        </li>
+                        <li class="flex justify-between items-center border-b border-saffron-200 pb-2">
+                            <span class="text-gray-700 font-medium">Sandhya Aarti / Hanuman Chalisa</span>
+                            <span class="bg-white px-3 py-1 rounded text-saffron-800 font-bold shadow-sm">07:00 PM</span>
+                        </li>
+                        <li class="flex justify-between items-center pb-2">
+                            <span class="text-gray-700 font-medium">Shayan Aarti</span>
+                            <span class="bg-white px-3 py-1 rounded text-saffron-800 font-bold shadow-sm">09:00 PM</span>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Donation Section -->
+    <section id="donation" class="py-16 bg-orange-50 border-y border-orange-100">
+        <div class="max-w-4xl mx-auto px-4 text-center">
+            <div class="mb-10 animate-fade-in-up">
+                <h2 class="text-3xl md:text-4xl font-bold text-saffron-800 mb-4 font-devanagari">Mandir Nirman Sahyog</h2>
+                <div class="w-24 h-1 bg-saffron-500 mx-auto rounded"></div>
+                <p class="mt-4 text-lg text-gray-700 font-medium">
+                    Aapke chhote se sahyog se mandir nirman aur aayojan safal honge. Kripya niche diye gaye QR code ko scan karke apna yogdan dein.
+                </p>
+            </div>
+
+            <div class="bg-white p-8 md:p-12 rounded-3xl shadow-2xl inline-block border-t-8 border-saffron-600 relative overflow-hidden">
+                <!-- Background decoration -->
+                <i class="fa-solid fa-om absolute top-4 left-4 text-6xl text-saffron-50 opacity-50"></i>
+                <i class="fa-solid fa-bell absolute bottom-4 right-4 text-6xl text-saffron-50 opacity-50"></i>
+                
+                <!-- QR Code Box -->
+                <div class="relative z-10">
+                    <p class="text-xl md:text-2xl font-bold text-saffron-700 mb-6 font-devanagari">Scan & Pay with any UPI App</p>
+                    
+                    <div class="qr-animated-border rounded-xl overflow-hidden p-2 bg-white inline-block shadow-lg">
+                        <img src="https://i.ibb.co/cS6vKsTV/IMG-20260329-WA0002.jpg" alt="Donation QR Code" class="w-64 md:w-80 h-auto rounded-lg object-contain bg-gray-100">
+                    </div>
+                    
+                    <div class="mt-8">
+                        <p class="text-2xl font-bold text-gray-800 mb-1">Hanuman Mandir Pooja Samiti</p>
+                        <div class="inline-block mt-3 bg-gray-100 px-6 py-3 rounded-full border border-gray-200 shadow-inner">
+                            <p class="text-gray-600 font-medium">
+                                UPI Number: <span class="font-bold text-saffron-800 text-lg tracking-wide ml-2 select-all">9576447698</span>
+                            </p>
+                        </div>
+                        <p class="text-sm text-gray-500 mt-4"><i class="fa-solid fa-shield-heart text-green-500 mr-1"></i> Aapka gupt daan mandir vikas me lagaya jayega.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Committee Section -->
+    <section id="committee" class="py-16 bg-white">
+        <div class="max-w-6xl mx-auto px-4">
+            <div class="text-center mb-10">
+                <h2 class="text-3xl md:text-4xl font-bold text-saffron-800 mb-4 font-devanagari">Mandir Samiti Sadasya</h2>
+                <div class="w-24 h-1 bg-saffron-500 mx-auto rounded"></div>
+                <p class="mt-4 text-gray-600">In sabhi sadasyon ke nishkam sahyog aur parishram se mandir ka nirman safal ho raha hai.</p>
+            </div>
+
+            <!-- Glowing Animated Box -->
+            <div class="bg-gradient-to-r from-saffron-500 via-yellow-500 to-saffron-600 rounded-2xl overflow-hidden border-4 animated-glow-box relative">
+                <!-- Background Pattern overlay -->
+                <div class="absolute inset-0 bg-white opacity-20"></div>
+                
+                <div class="relative z-10 px-4 py-2 text-center bg-saffron-800 bg-opacity-80">
+                    <h3 class="text-white font-bold text-lg tracking-wider">॥ Samiti Sadasya Suchi ॥</h3>
+                </div>
+
+                <!-- Marquee Container -->
+                <div class="marquee-wrapper z-10">
+                    <div class="marquee-content items-center">
+                        <!-- Group 1 -->
+                        <div class="bg-white text-saffron-900 px-6 py-3 rounded-full font-bold shadow-lg mx-3 flex items-center gap-2 transform transition hover:scale-110 hover:bg-yellow-100 cursor-default"><i class="fa-solid fa-user-shield text-saffron-500"></i> Shashikant Sah</div>
+                        <div class="bg-white text-saffron-900 px-6 py-3 rounded-full font-bold shadow-lg mx-3 flex items-center gap-2 transform transition hover:scale-110 hover:bg-yellow-100 cursor-default"><i class="fa-solid fa-user text-saffron-500"></i> Prakash Singh</div>
+                        <div class="bg-white text-saffron-900 px-6 py-3 rounded-full font-bold shadow-lg mx-3 flex items-center gap-2 transform transition hover:scale-110 hover:bg-yellow-100 cursor-default"><i class="fa-solid fa-user text-saffron-500"></i> Ranjeet Kumar</div>
+                        <div class="bg-white text-saffron-900 px-6 py-3 rounded-full font-bold shadow-lg mx-3 flex items-center gap-2 transform transition hover:scale-110 hover:bg-yellow-100 cursor-default"><i class="fa-solid fa-user text-saffron-500"></i> Suraj Kumar</div>
+                        <div class="bg-white text-saffron-900 px-6 py-3 rounded-full font-bold shadow-lg mx-3 flex items-center gap-2 transform transition hover:scale-110 hover:bg-yellow-100 cursor-default"><i class="fa-solid fa-user text-saffron-500"></i> Ranjeet Kumar</div>
+                        <div class="bg-white text-saffron-900 px-6 py-3 rounded-full font-bold shadow-lg mx-3 flex items-center gap-2 transform transition hover:scale-110 hover:bg-yellow-100 cursor-default"><i class="fa-solid fa-user text-saffron-500"></i> Kundan Kumar</div>
+                        <div class="bg-white text-saffron-900 px-6 py-3 rounded-full font-bold shadow-lg mx-3 flex items-center gap-2 transform transition hover:scale-110 hover:bg-yellow-100 cursor-default"><i class="fa-solid fa-user text-saffron-500"></i> Ramayodhya Manjhi</div>
+                        <div class="bg-white text-saffron-900 px-6 py-3 rounded-full font-bold shadow-lg mx-3 flex items-center gap-2 transform transition hover:scale-110 hover:bg-yellow-100 cursor-default"><i class="fa-solid fa-user text-saffron-500"></i> Anshal Kumar</div>
+                        <div class="bg-white text-saffron-900 px-6 py-3 rounded-full font-bold shadow-lg mx-3 flex items-center gap-2 transform transition hover:scale-110 hover:bg-yellow-100 cursor-default"><i class="fa-solid fa-user text-saffron-500"></i> Himanshu Kumar</div>
+                        <div class="bg-white text-saffron-900 px-6 py-3 rounded-full font-bold shadow-lg mx-3 flex items-center gap-2 transform transition hover:scale-110 hover:bg-yellow-100 cursor-default"><i class="fa-solid fa-user text-saffron-500"></i> Mritunjay Kumar</div>
+                        <div class="bg-white text-saffron-900 px-6 py-3 rounded-full font-bold shadow-lg mx-3 flex items-center gap-2 transform transition hover:scale-110 hover:bg-yellow-100 cursor-default"><i class="fa-solid fa-user text-saffron-500"></i> Ankush Kumar</div>
+                        <div class="bg-white text-saffron-900 px-6 py-3 rounded-full font-bold shadow-lg mx-3 flex items-center gap-2 transform transition hover:scale-110 hover:bg-yellow-100 cursor-default"><i class="fa-solid fa-user text-saffron-500"></i> Satyajeet Kumar</div>
+                        <div class="bg-white text-saffron-900 px-6 py-3 rounded-full font-bold shadow-lg mx-3 flex items-center gap-2 transform transition hover:scale-110 hover:bg-yellow-100 cursor-default"><i class="fa-solid fa-user text-saffron-500"></i> Satkeshu Kumar</div>
+                        
+                        <!-- Group 2 (Duplicate) -->
+                        <div class="bg-white text-saffron-900 px-6 py-3 rounded-full font-bold shadow-lg mx-3 flex items-center gap-2 transform transition hover:scale-110 hover:bg-yellow-100 cursor-default"><i class="fa-solid fa-user-shield text-saffron-500"></i> Shashikant Sah</div>
+                        <div class="bg-white text-saffron-900 px-6 py-3 rounded-full font-bold shadow-lg mx-3 flex items-center gap-2 transform transition hover:scale-110 hover:bg-yellow-100 cursor-default"><i class="fa-solid fa-user text-saffron-500"></i> Prakash Singh</div>
+                        <div class="bg-white text-saffron-900 px-6 py-3 rounded-full font-bold shadow-lg mx-3 flex items-center gap-2 transform transition hover:scale-110 hover:bg-yellow-100 cursor-default"><i class="fa-solid fa-user text-saffron-500"></i> Ranjeet Kumar</div>
+                        <div class="bg-white text-saffron-900 px-6 py-3 rounded-full font-bold shadow-lg mx-3 flex items-center gap-2 transform transition hover:scale-110 hover:bg-yellow-100 cursor-default"><i class="fa-solid fa-user text-saffron-500"></i> Suraj Kumar</div>
+                        <div class="bg-white text-saffron-900 px-6 py-3 rounded-full font-bold shadow-lg mx-3 flex items-center gap-2 transform transition hover:scale-110 hover:bg-yellow-100 cursor-default"><i class="fa-solid fa-user text-saffron-500"></i> Ranjeet Kumar</div>
+                        <div class="bg-white text-saffron-900 px-6 py-3 rounded-full font-bold shadow-lg mx-3 flex items-center gap-2 transform transition hover:scale-110 hover:bg-yellow-100 cursor-default"><i class="fa-solid fa-user text-saffron-500"></i> Kundan Kumar</div>
+                        <div class="bg-white text-saffron-900 px-6 py-3 rounded-full font-bold shadow-lg mx-3 flex items-center gap-2 transform transition hover:scale-110 hover:bg-yellow-100 cursor-default"><i class="fa-solid fa-user text-saffron-500"></i> Ramayodhya Manjhi</div>
+                        <div class="bg-white text-saffron-900 px-6 py-3 rounded-full font-bold shadow-lg mx-3 flex items-center gap-2 transform transition hover:scale-110 hover:bg-yellow-100 cursor-default"><i class="fa-solid fa-user text-saffron-500"></i> Anshal Kumar</div>
+                        <div class="bg-white text-saffron-900 px-6 py-3 rounded-full font-bold shadow-lg mx-3 flex items-center gap-2 transform transition hover:scale-110 hover:bg-yellow-100 cursor-default"><i class="fa-solid fa-user text-saffron-500"></i> Himanshu Kumar</div>
+                        <div class="bg-white text-saffron-900 px-6 py-3 rounded-full font-bold shadow-lg mx-3 flex items-center gap-2 transform transition hover:scale-110 hover:bg-yellow-100 cursor-default"><i class="fa-solid fa-user text-saffron-500"></i> Mritunjay Kumar</div>
+                        <div class="bg-white text-saffron-900 px-6 py-3 rounded-full font-bold shadow-lg mx-3 flex items-center gap-2 transform transition hover:scale-110 hover:bg-yellow-100 cursor-default"><i class="fa-solid fa-user text-saffron-500"></i> Ankush Kumar</div>
+                        <div class="bg-white text-saffron-900 px-6 py-3 rounded-full font-bold shadow-lg mx-3 flex items-center gap-2 transform transition hover:scale-110 hover:bg-yellow-100 cursor-default"><i class="fa-solid fa-user text-saffron-500"></i> Satyajeet Kumar</div>
+                        <div class="bg-white text-saffron-900 px-6 py-3 rounded-full font-bold shadow-lg mx-3 flex items-center gap-2 transform transition hover:scale-110 hover:bg-yellow-100 cursor-default"><i class="fa-solid fa-user text-saffron-500"></i> Satkeshu Kumar</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Location & Contact Section -->
+    <section id="contact" class="py-16 bg-gray-100">
+        <div class="max-w-6xl mx-auto px-4">
+            <div class="bg-white rounded-2xl shadow-lg overflow-hidden">
+                <div class="grid md:grid-cols-2">
+                    <!-- Contact Info -->
+                    <div class="p-8 lg:p-12 bg-saffron-700 text-white">
+                        <h2 class="text-3xl font-bold mb-6 font-devanagari text-yellow-300">Sampark Karein</h2>
+                        <p class="mb-8 text-saffron-100">Mandir samiti se sampark karne ya kisi bhi jankari ke liye niche diye gaye pate par aayein.</p>
+                        
+                        <div class="space-y-6">
+                            <div class="flex items-start gap-4">
+                                <i class="fa-solid fa-location-dot mt-1 text-xl text-yellow-400"></i>
+                                <div>
+                                    <h4 class="font-bold text-lg">Pata (Address)</h4>
+                                    <p class="text-saffron-100">Shri Bajarang Bali Mandir,<br>Gram - Bakharaur,<br>Pin Code - 841407</p>
+                                </div>
+                            </div>
+                            <div class="flex items-start gap-4">
+                                <i class="fa-solid fa-phone mt-1 text-xl text-yellow-400"></i>
+                                <div>
+                                    <h4 class="font-bold text-lg">Phone Number</h4>
+                                    <a href="tel:+919576447698" class="text-saffron-100 hover:text-white hover:underline transition-all block text-lg">+91 95764 47698</a>
+                                    <p class="text-saffron-200 text-sm mt-1">(Mandir Samiti Adhyaksh)</p>
+                                </div>
+                            </div>
+                            <div class="flex items-start gap-4">
+                                <i class="fa-solid fa-envelope mt-1 text-xl text-yellow-400"></i>
+                                <div>
+                                    <h4 class="font-bold text-lg">Email</h4>
+                                    <a href="mailto:bakharaurhanumanmandir@gmail.com" class="text-saffron-100 hover:text-white hover:underline transition-all block break-all">bakharaurhanumanmandir@gmail.com</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- Mini Map -->
+                    <div class="h-80 md:h-auto relative w-full min-h-[300px] bg-gray-200">
+                        <iframe 
+                            src="https://maps.google.com/maps?q=Bakharaur,Bihar,841407&t=&z=15&ie=UTF8&iwloc=&output=embed" 
+                            class="absolute top-0 left-0 w-full h-full border-0" 
+                            allowfullscreen="" 
+                            loading="lazy" 
+                            referrerpolicy="no-referrer-when-downgrade">
+                        </iframe>
+                        <div class="absolute bottom-6 left-0 right-0 flex justify-center z-10">
+                            <a href="https://maps.app.goo.gl/aa7G7jkeLZqEAhs18" target="_blank" rel="noopener noreferrer" 
+                               class="bg-blue-600 text-white px-6 py-3 rounded-full text-sm md:text-base font-bold shadow-2xl hover:bg-blue-700 transition transform hover:scale-105 flex items-center gap-2 border-2 border-white animate-bounce-slow">
+                                <i class="fa-solid fa-diamond-turn-right text-xl"></i>
+                                Rasta Dekhein (Get Directions)
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-gray-900 text-white py-8 border-t-4 border-saffron-600">
+        <div class="max-w-6xl mx-auto px-4 text-center">
+            <h3 class="text-2xl font-devanagari text-yellow-400 mb-2">Shri Bajarang Bali Mandir, Bakharaur</h3>
+            <p class="text-gray-400 mb-6">Sabhi gramwasion ke sahyog se nirmit.</p>
+            <div class="flex justify-center space-x-4 mb-6">
+                <a href="#" class="w-10 h-10 rounded-full bg-gray-800 flex items-center justify-center hover:bg-saffron-600 transition text-white">
+                    <i class="fa-brands fa-facebook-f"></i>
+                </a>
+                <a href="https://whatsapp.com/channel/0029VbCKZueHgZWcgsb8Em01" target="_blank" rel="noopener noreferrer" class="w-10 h-10 rounded-full bg-gray-800 flex items-center justify-center hover:bg-saffron-600 transition text-white">
+                    <i class="fa-brands fa-whatsapp"></i>
+                </a>
+                <a href="https://www.instagram.com/invites/contact/?utm_source=ig_contact_invite&utm_medium=copy_link&utm_content=uw6vhvj" target="_blank" rel="noopener noreferrer" class="w-10 h-10 rounded-full bg-gray-800 flex items-center justify-center hover:bg-saffron-600 transition text-white">
+                    <i class="fa-brands fa-instagram"></i>
+                </a>
+                <a href="https://youtube.com/@hanumanmandir-j2m?si=3vPZ9TaiSr8aWe9U" target="_blank" rel="noopener noreferrer" class="w-10 h-10 rounded-full bg-gray-800 flex items-center justify-center hover:bg-saffron-600 transition text-white">
+                    <i class="fa-brands fa-youtube"></i>
+                </a>
+            </div>
+            <p class="text-gray-500 text-sm">
+                &copy; 2026 Mandir Samiti Bakharaur. Sabhi adhikar surakshit.
+            </p>
+        </div>
+    </footer>
+
+    <!-- Floating WhatsApp Button -->
+    <div class="fixed bottom-6 right-6 z-50 flex flex-col items-center animate-bounce-slow">
+        <!-- Yahan naya WhatsApp Channel Link Update ho gaya hai -->
+        <a href="https://whatsapp.com/channel/0029VbCKZueHgZWcgsb8Em01" target="_blank" rel="noopener noreferrer" 
+           class="bg-green-500 hover:bg-green-600 text-white w-14 h-14 rounded-full shadow-2xl transition-transform transform hover:scale-110 flex items-center justify-center mb-2 border-2 border-white">
+            <i class="fa-brands fa-whatsapp text-3xl"></i>
+        </a>
+        <div class="bg-white px-3 py-2 rounded-xl shadow-xl border border-green-200 text-center max-w-[130px]">
+            <p class="text-xs font-bold animate-pulse-wa">Update jaanane ke liye click kare</p>
+            <p class="text-[10px] text-gray-600 mt-1 font-medium">Dhanyawad 🙏</p>
+        </div>
+    </div>
+
+    <!-- External JS File Link -->
+    <script src="script.js"></script>
+</body>
+</html>
