@@ -1,0 +1,81 @@
+/* Base Styles */
+body {
+    font-family: 'Poppins', sans-serif;
+    scroll-behavior: smooth;
+}
+
+/* Background Image Rule (Dhyan rakhein ki ye photo usi folder me ho jahan html aur css hain) */
+.bg-hero-pattern {
+    background: linear-gradient(rgba(230, 81, 0, 0.7), rgba(191, 54, 12, 0.8)), url('./1000155200.png');
+    background-size: cover;
+    background-position: center;
+}
+
+/* Pulse Color Animation for Hero text */
+.chant-text {
+    animation: pulse-color 3s infinite;
+}
+@keyframes pulse-color {
+    0% { color: #ff9800; }
+    50% { color: #fff; }
+    100% { color: #ff9800; }
+}
+
+/* Committee Animated Box */
+@keyframes glow-box {
+    0% { box-shadow: 0 0 10px #f57c00; border-color: #ffb74d; }
+    50% { box-shadow: 0 0 30px #ffcc80, 0 0 10px #f57c00; border-color: #ffe0b2; }
+    100% { box-shadow: 0 0 10px #f57c00; border-color: #ffb74d; }
+}
+.animated-glow-box {
+    animation: glow-box 2.5s infinite alternate;
+}
+
+/* QR Code Animation Border */
+@keyframes qr-glow {
+    0% { box-shadow: 0 0 15px #f57c00, inset 0 0 5px #f57c00; border-color: #ff9800; }
+    50% { box-shadow: 0 0 35px #ffea00, inset 0 0 15px #ffea00; border-color: #ffea00; }
+    100% { box-shadow: 0 0 15px #e65100, inset 0 0 5px #e65100; border-color: #ff9800; }
+}
+.qr-animated-border {
+    animation: qr-glow 2s infinite alternate;
+    border: 4px solid #ff9800;
+}
+
+/* Marquee (Scrolling text) Settings */
+.marquee-wrapper {
+    overflow: hidden;
+    white-space: nowrap;
+    position: relative;
+    width: 100%;
+    padding: 1.5rem 0;
+}
+.marquee-content {
+    display: inline-flex;
+    animation: marquee 35s linear infinite;
+}
+.marquee-content:hover {
+    animation-play-state: paused;
+}
+@keyframes marquee {
+    0% { transform: translateX(0); }
+    100% { transform: translateX(-50%); }
+}
+
+/* Floating WhatsApp Button Animations */
+@keyframes bounce-slow {
+    0%, 100% { transform: translateY(0); }
+    50% { transform: translateY(-8px); }
+}
+.animate-bounce-slow {
+    animation: bounce-slow 2.5s infinite;
+}
+
+@keyframes pulse-wa-text {
+    0% { transform: scale(1); color: #16a34a; }
+    50% { transform: scale(1.05); color: #15803d; }
+    100% { transform: scale(1); color: #16a34a; }
+}
+.animate-pulse-wa {
+    animation: pulse-wa-text 2s infinite alternate;
+}
