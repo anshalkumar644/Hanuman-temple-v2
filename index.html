@@ -1,3 +1,4 @@
+```html
 <!DOCTYPE html>
 <html lang="hi">
 <head>
@@ -86,14 +87,14 @@
         </div>
     </nav>
 
-    <!-- Hero Section -->
-    <section id="home" class="pt-16 min-h-screen flex items-center justify-center bg-hero-pattern text-white text-center px-4">
-        <div class="max-w-4xl mx-auto py-20 animate-fade-in-up">
+    <!-- Hero Section (Yahan 'overflow-hidden' add kiya gaya hai animation ke liye) -->
+    <section id="home" class="pt-16 min-h-screen flex items-center justify-center bg-hero-pattern text-white text-center px-4 overflow-hidden">
+        <div class="max-w-4xl mx-auto py-20 animate-fade-in-up relative z-10">
             <h2 class="text-yellow-300 font-bold text-xl md:text-3xl mb-2 chant-text">॥ Jai Shri Ram ॥ ॥ Jai Bajarang Bali ॥</h2>
-            <h1 class="text-4xl md:text-6xl font-bold font-devanagari mb-6 leading-tight shadow-sm text-white">
+            <h1 class="text-4xl md:text-6xl font-bold font-devanagari mb-6 leading-tight shadow-sm text-white drop-shadow-lg">
                 Shri Bajarang Bali Mandir
             </h1>
-            <p class="text-lg md:text-2xl mb-8 text-gray-100 font-medium">
+            <p class="text-lg md:text-2xl mb-8 text-gray-100 font-medium drop-shadow-md">
                 Gram - Bakharaur, Aapka Hardik Swagat Karta Hai
             </p>
             <div class="flex flex-col sm:flex-row gap-4 justify-center">
@@ -325,7 +326,7 @@
                         <div class="bg-white text-saffron-900 px-6 py-3 rounded-full font-bold shadow-lg mx-3 flex items-center gap-2 transform transition hover:scale-110 hover:bg-yellow-100 cursor-default"><i class="fa-solid fa-user text-saffron-500"></i> Satyajeet Kumar</div>
                         <div class="bg-white text-saffron-900 px-6 py-3 rounded-full font-bold shadow-lg mx-3 flex items-center gap-2 transform transition hover:scale-110 hover:bg-yellow-100 cursor-default"><i class="fa-solid fa-user text-saffron-500"></i> Satkeshu Kumar</div>
                         
-                        <!-- Group 2 (Duplicate) -->
+                        <!-- Group 2 (Duplicate for smooth scrolling) -->
                         <div class="bg-white text-saffron-900 px-6 py-3 rounded-full font-bold shadow-lg mx-3 flex items-center gap-2 transform transition hover:scale-110 hover:bg-yellow-100 cursor-default"><i class="fa-solid fa-user-shield text-saffron-500"></i> Shashikant Sah</div>
                         <div class="bg-white text-saffron-900 px-6 py-3 rounded-full font-bold shadow-lg mx-3 flex items-center gap-2 transform transition hover:scale-110 hover:bg-yellow-100 cursor-default"><i class="fa-solid fa-user text-saffron-500"></i> Prakash Singh</div>
                         <div class="bg-white text-saffron-900 px-6 py-3 rounded-full font-bold shadow-lg mx-3 flex items-center gap-2 transform transition hover:scale-110 hover:bg-yellow-100 cursor-default"><i class="fa-solid fa-user text-saffron-500"></i> Ranjeet Kumar</div>
@@ -430,7 +431,6 @@
 
     <!-- Floating WhatsApp Button -->
     <div class="fixed bottom-6 right-6 z-50 flex flex-col items-center animate-bounce-slow">
-        <!-- Yahan naya WhatsApp Channel Link Update ho gaya hai -->
         <a href="https://whatsapp.com/channel/0029VbCKZueHgZWcgsb8Em01" target="_blank" rel="noopener noreferrer" 
            class="bg-green-500 hover:bg-green-600 text-white w-14 h-14 rounded-full shadow-2xl transition-transform transform hover:scale-110 flex items-center justify-center mb-2 border-2 border-white">
             <i class="fa-brands fa-whatsapp text-3xl"></i>
@@ -445,3 +445,6 @@
     <script src="script.js"></script>
 </body>
 </html>
+
+
+```
